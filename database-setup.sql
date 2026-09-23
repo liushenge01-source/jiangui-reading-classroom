@@ -10,15 +10,14 @@ create table if not exists public.classroom_submissions (
 
 alter table public.classroom_submissions enable row level security;
 revoke all on public.classroom_submissions from anon, authenticated;
-grant insert on public.classroom_submissions to anon;
-grant select on public.classroom_submissions to authenticated;
+grant insert, select on public.classroom_submissions to anon;
 
 drop policy if exists "Students can submit work" on public.classroom_submissions;
 create policy "Students can submit work"
   on public.classroom_submissions for insert to anon
   with check (true);
 
-drop policy if exists "Signed-in teacher can view work" on public.classroom_submissions;
-create policy "Signed-in teacher can view work"
-  on public.classroom_submissions for select to authenticated
-  using (auth.uid() is not null);
+drop policy if exists "Anyone can read classroom work" on public.classroom_submissions;
+create policy "Anyone can read classroom work"
+  on public.classroom_submissions for select to anon
+  using (true);
