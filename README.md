@@ -17,7 +17,7 @@ GitHub Pages 是静态网站，不能自行接收和保存不同设备的提交�
 
 1. 创建 Supabase 项目，并在项目 SQL Editor 执行 `database-setup.sql`。
 2. 教师二维码直接打开作品列表，无需登录或口令。
-3. 将项目 URL 和 publishable/anon key 填入 `config.js`。此键可用于浏览器；绝不能填写 `service_role` 密钥。
-4. 提交并发布 `config.js` 后，学生可以匿名提交，任何拿到教师页面链接的人都可读取学生作品；匿名学生也可读取。不要在作品中填写真实姓名或隐私信息。
+3. 项目 URL 和 Supabase publishable key 已配置在 `index.html` 中。publishable key 可以放在网页里；绝不能填写 `service_role`/secret key。
+4. 发布更新后的 `index.html` 后，学生可以匿名提交，任何拿到教师页面链接的人都可读取学生作品；匿名学生也可读取。不要在作品中填写真实姓名或隐私信息。
 
 教师作品列表按提交先后编号为“学生 1、学生 2……”；每位提交者单独显示一张作品卡。学生姓名为可选昵称；建议课堂中使用昵称或匿名。学生提交的预测、依据和绘本会存入该 Supabase 项目。在线数据库接通前，提交按钮会提示尚未配置，不会假装提交成功。
