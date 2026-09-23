@@ -38,7 +38,7 @@ begin
   if clear_key is null or encode(extensions.digest(convert_to(clear_key, 'UTF8'), 'sha256'), 'hex') <> 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3' then
     raise exception 'Invalid classroom clear key' using errcode = '42501';
   end if;
-  delete from public.classroom_submissions;
+  delete from public.classroom_submissions where true;
   get diagnostics removed = row_count;
   return removed;
 end;
