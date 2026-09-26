@@ -2,8 +2,8 @@
 
 公开课堂页面：
 
-- 教师入口：https://liushenge01-source.github.io/jiangui-reading-classroom/?teacher=1&v=20260926m
-- 学生创作：https://liushenge01-source.github.io/jiangui-reading-classroom/?student=1&v=20260926m
+- 教师入口：https://liushenge01-source.github.io/jiangui-reading-classroom/?teacher=1&v=20260926n
+- 学生创作：https://liushenge01-source.github.io/jiangui-reading-classroom/?student=1&v=20260926n
 
 教师二维码：`teacher-qr.png`；学生二维码：`student-qr.png`。
 
